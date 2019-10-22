@@ -18,45 +18,53 @@ class Directory extends React.Component {
         {
           title: 'home security',
           imageUrl: 'https://images.unsplash.com/photo-1549109926-58f039549485?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
-          id: 1
+          id: 1,
+          linkUrl: 'security'
         },
         {
           title: 'lighting',
           imageUrl: 'https://live.staticflickr.com/2438/3881682653_ed5ac1f2a2_b.jpg',
-          id: 2
+          id: 2,
+          linkUrl: ''
         },
         {
           title: 'speaker',
           imageUrl: 'https://images.unsplash.com/photo-1562006101-8cb4476db274?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
-          id: 3
+          id: 3,
+          linkUrl: ''
         },
         {
           title: 'thermostat',
           imageUrl: 'https://images.unsplash.com/photo-1545259741-2ea3ebf61fa3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
           size: 'large',
-          id: 4
+          id: 4,
+          linkUrl: ''
         },
         {
           title: 'vacuum',
           imageUrl: 'https://live.staticflickr.com/2289/5828181726_9ed5c5c97d_b.jpg',
           size: 'large',
-          id: 5
+          id: 5,
+          linkUrl: ''
         },
         {
           title: 'doorbell',
           imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/2/26/Ring_video_doorbell.jpg',
           size: 'large',
-          id: 6
+          id: 6,
+          linkUrl: ''
         },
         {
           title: 'tv',
           imageUrl: 'https://images.unsplash.com/photo-1560169897-fc0cdbdfa4d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80',
-          id: 7
+          id: 7,
+          linkUrl: ''
         },
         {
           title: 'headphones',
           imageUrl: 'https://images.unsplash.com/photo-1565168316300-8685a0e25dcd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=629&q=80',
-          id: 8
+          id: 8,
+          linkUrl: ''
         }
       ]
     };
@@ -67,8 +75,8 @@ class Directory extends React.Component {
   render() {
     return (
       <div className='directory-menu'>
-        {this.state.sections.map(({ title, imageUrl, id, size }) => (
-          <MenuItem key={id} title={title} imageUrl={imageUrl} size={size} />
+        {this.state.sections.map(({ id, ...otherSectionProps }) => (
+          <MenuItem key={id} {...otherSectionProps} />
         ))}
       </div>
     );
