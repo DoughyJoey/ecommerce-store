@@ -16,7 +16,7 @@ class Directory extends React.Component {
     this.state = {
       sections: [
         {
-          title: 'home security',
+          title: 'security',
           imageUrl: 'https://images.unsplash.com/photo-1549109926-58f039549485?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
           id: 1,
           linkUrl: 'security'
@@ -55,7 +55,7 @@ class Directory extends React.Component {
           linkUrl: ''
         },
         {
-          title: 'tv',
+          title: 'television',
           imageUrl: 'https://images.unsplash.com/photo-1560169897-fc0cdbdfa4d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80',
           id: 7,
           linkUrl: ''
