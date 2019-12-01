@@ -6,241 +6,241 @@ const SHOP_DATA = [
     items: [
       {
         id: 1,
-        name: 'Security cam 1',
-        imageUrl: 'https://images.unsplash.com/photo-1520697830682-bbb6e85e2b0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
-        price: 165
+        name: 'Arlo 4k',
+        imageUrl: 'https://images.unsplash.com/photo-1558002038-1055907df827?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
+        price: 190
       },
       {
         id: 2,
-        name: 'Security cam 2',
-        imageUrl: 'https://images.unsplash.com/photo-1520697830682-bbb6e85e2b0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
-        price: 187
+        name: 'Arlo Pro',
+        imageUrl: 'https://images.unsplash.com/photo-1558002038-1055907df827?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
+        price: 240
       },
       {
         id: 3,
-        name: 'Security cam 3',
-        imageUrl: 'https://images.unsplash.com/photo-1520697830682-bbb6e85e2b0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
-        price: 165
+        name: 'TP-Link 4',
+        imageUrl: 'https://images.unsplash.com/photo-1558002038-1055907df827?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
+        price: 400
       },
       {
         id: 4,
-        name: 'Security cam 4',
-        imageUrl: 'https://images.unsplash.com/photo-1520697830682-bbb6e85e2b0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
-        price: 123
+        name: 'Neos Smart Cam',
+        imageUrl: 'https://images.unsplash.com/photo-1558002038-1055907df827?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
+        price: 350
       },
       {
         id: 5,
-        name: 'Security cam 5',
-        imageUrl: 'https://images.unsplash.com/photo-1520697830682-bbb6e85e2b0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
-        price: 126
+        name: 'D-Link 2',
+        imageUrl: 'https://images.unsplash.com/photo-1558002038-1055907df827?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
+        price: 280
       },
       {
         id: 6,
-        name: 'Security cam 6',
-        imageUrl: 'https://images.unsplash.com/photo-1520697830682-bbb6e85e2b0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
-        price: 200
+        name: 'Swann Cam',
+        imageUrl: 'https://images.unsplash.com/photo-1558002038-1055907df827?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
+        price: 170
       },
       {
         id: 7,
-        name: 'Security cam 7',
-        imageUrl: 'https://images.unsplash.com/photo-1520697830682-bbb6e85e2b0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
-        price: 365
+        name: 'Reo Link',
+        imageUrl: 'https://images.unsplash.com/photo-1558002038-1055907df827?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
+        price: 130
       },
       {
         id: 8,
-        name: 'Security cam 8',
-        imageUrl: 'https://images.unsplash.com/photo-1520697830682-bbb6e85e2b0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
-        price: 265
+        name: 'Amcrest',
+        imageUrl: 'https://images.unsplash.com/photo-1558002038-1055907df827?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
+        price: 80
       },
       {
         id: 9,
-        name: 'Security cam 9',
-        imageUrl: 'https://images.unsplash.com/photo-1520697830682-bbb6e85e2b0b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
-        price: 87
+        name: 'Arlo 6',
+        imageUrl: 'https://images.unsplash.com/photo-1558002038-1055907df827?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
+        price: 75
       }
     ]
   },
   {
     id: 2,
-    title: 'Thermostats',
-    routeName: 'thermostat',
+    title: 'Lighting',
+    routeName: 'lighting',
     items: [
       {
         id: 10,
-        name: 'Thermostat 1',
-        imageUrl: 'https://live.staticflickr.com/4466/24011186108_feb76e07dd_b.jpg',
-        price: 237
+        name: 'Sengled Smart',
+        imageUrl: 'https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+        price: 55
       },
       {
         id: 11,
-        name: 'Thermostat 2',
-        imageUrl: 'https://live.staticflickr.com/4466/24011186108_feb76e07dd_b.jpg',
-        price: 394
+        name: 'Yeelight',
+        imageUrl: 'https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+        price: 80
       },
       {
         id: 12,
-        name: 'Thermostat 3',
-        imageUrl: 'https://live.staticflickr.com/4466/24011186108_feb76e07dd_b.jpg',
-        price: 384
+        name: 'Eufy',
+        imageUrl: 'https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+        price: 30
       },
       {
         id: 13,
-        name: 'Thermostat 4',
-        imageUrl: 'https://live.staticflickr.com/4466/24011186108_feb76e07dd_b.jpg',
-        price: 399
+        name: 'Philips Hue White',
+        imageUrl: 'https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+        price: 170
       },
       {
         id: 14,
-        name: 'Thermostat 5',
-        imageUrl: 'https://live.staticflickr.com/4466/24011186108_feb76e07dd_b.jpg',
-        price: 198
+        name: 'Philips Hue Color',
+        imageUrl: 'https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+        price: 80
       },
       {
         id: 15,
-        name: 'Thermostat 6',
-        imageUrl: 'https://live.staticflickr.com/4466/24011186108_feb76e07dd_b.jpg',
-        price: 387
+        name: 'Ring Smart',
+        imageUrl: 'https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+        price: 60
       },
       {
         id: 16,
-        name: 'Thermostat 7',
-        imageUrl: 'https://live.staticflickr.com/4466/24011186108_feb76e07dd_b.jpg',
+        name: 'Credd Smart',
+        imageUrl: 'https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
         price: 200
       },
       {
         id: 17,
-        name: 'Thermostat 8',
-        imageUrl: 'https://live.staticflickr.com/4466/24011186108_feb76e07dd_b.jpg',
-        price: 500
+        name: 'Zink Smart',
+        imageUrl: 'https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+        price: 175
       }
     ]
   },
   {
     id: 3,
-    title: 'Vacuums',
-    routeName: 'vacuum',
+    title: 'Thermostat',
+    routeName: 'thermostat',
     items: [
       {
         id: 18,
-        name: 'Vacuum 1',
-        imageUrl: 'https://live.staticflickr.com/2289/5828181726_9ed5c5c97d_b.jpg',
-        price: 165
+        name: 'Ecobee 3',
+        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/e/ee/QubyDisplay_Home_withbackground.png',
+        price: 177
       },
       {
         id: 19,
-        name: 'Vacuum 2',
-        imageUrl: 'https://live.staticflickr.com/2289/5828181726_9ed5c5c97d_b.jpg',
-        price: 40
+        name: 'Ecobee 1',
+        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/e/ee/QubyDisplay_Home_withbackground.png',
+        price: 140
       },
       {
         id: 20,
-        name: 'Vacuum 3',
-        imageUrl: 'https://live.staticflickr.com/2289/5828181726_9ed5c5c97d_b.jpg',
-        price: 60
+        name: 'Honeywell 14',
+        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/e/ee/QubyDisplay_Home_withbackground.png',
+        price: 200
       },
       {
         id: 21,
-        name: 'Vacuum 4',
-        imageUrl: 'https://live.staticflickr.com/2289/5828181726_9ed5c5c97d_b.jpg',
-        price: 100
+        name: 'Nest 5',
+        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/e/ee/QubyDisplay_Home_withbackground.png',
+        price: 250
       },
       {
         id: 22,
-        name: 'Vacuum 5',
-        imageUrl: 'https://live.staticflickr.com/2289/5828181726_9ed5c5c97d_b.jpg',
-        price: 130
+        name: 'Hive 16',
+        imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/e/ee/QubyDisplay_Home_withbackground.png',
+        price: 420
       }
     ]
   },
   {
     id: 4,
-    title: 'Lighting',
-    routeName: 'lighting',
+    title: 'Speaker',
+    routeName: 'speaker',
     items: [
       {
         id: 23,
-        name: 'Light 1',
-        imageUrl: 'https://cdn.pixabay.com/photo/2015/04/22/09/32/led-734433_960_720.jpg',
-        price: 45
+        name: 'Echo 3',
+        imageUrl: 'https://images.pexels.com/photos/1666313/pexels-photo-1666313.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+        price: 55
       },
       {
         id: 24,
-        name: 'Light 2',
-        imageUrl: 'https://cdn.pixabay.com/photo/2015/04/22/09/32/led-734433_960_720.jpg',
-        price: 56
+        name: 'Echo 6',
+        imageUrl: 'https://images.pexels.com/photos/1666313/pexels-photo-1666313.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+        price: 178
       },
       {
         id: 25,
-        name: 'Light 3',
-        imageUrl: 'https://cdn.pixabay.com/photo/2015/04/22/09/32/led-734433_960_720.jpg',
-        price: 80
+        name: 'Google Home 2',
+        imageUrl: 'https://images.pexels.com/photos/1666313/pexels-photo-1666313.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+        price: 300
       },
       {
         id: 26,
-        name: 'Light 4',
-        imageUrl: 'https://cdn.pixabay.com/photo/2015/04/22/09/32/led-734433_960_720.jpg',
-        price: 98
+        name: 'Sonos One',
+        imageUrl: 'https://images.pexels.com/photos/1666313/pexels-photo-1666313.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+        price: 150
       },
       {
         id: 27,
-        name: 'Light 5',
-        imageUrl: 'https://cdn.pixabay.com/photo/2015/04/22/09/32/led-734433_960_720.jpg',
-        price: 99
+        name: 'JBL Link 10',
+        imageUrl: 'https://images.pexels.com/photos/1666313/pexels-photo-1666313.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+        price: 80
       },
       {
         id: 28,
-        name: 'Light 6',
-        imageUrl: 'https://cdn.pixabay.com/photo/2015/04/22/09/32/led-734433_960_720.jpg',
-        price: 23
+        name: 'Apple HomePod',
+        imageUrl: 'https://images.pexels.com/photos/1666313/pexels-photo-1666313.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+        price: 255
       },
       {
         id: 29,
-        name: 'Light 7',
-        imageUrl: 'https://cdn.pixabay.com/photo/2015/04/22/09/32/led-734433_960_720.jpg',
-        price: 15
+        name: 'Google Nest',
+        imageUrl: 'https://images.pexels.com/photos/1666313/pexels-photo-1666313.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+        price: 370
       }
     ]
   },
   {
     id: 5,
-    title: 'Speakers',
-    routeName: 'speaker',
+    title: 'Vacuum',
+    routeName: 'vacuum',
     items: [
       {
         id: 30,
-        name: 'Speaker 1',
-        imageUrl: 'https://images.pexels.com/photos/1054554/pexels-photo-1054554.jpeg?cs=srgb&dl=close-up-focus-gadget-1054554.jpg&fm=jpg',
-        price: 176
+        name: 'Roomba 10',
+        imageUrl: 'https://live.staticflickr.com/3641/5827633935_12b70cf3d1_b.jpg',
+        price: 179
       },
       {
         id: 31,
-        name: 'Speaker 2',
-        imageUrl: 'https://images.pexels.com/photos/1054554/pexels-photo-1054554.jpeg?cs=srgb&dl=close-up-focus-gadget-1054554.jpg&fm=jpg',
-        price: 165
+        name: 'Roomba 4',
+        imageUrl: 'https://live.staticflickr.com/3641/5827633935_12b70cf3d1_b.jpg',
+        price: 300
       },
       {
         id: 32,
-        name: 'Speaker 3',
-        imageUrl: 'https://images.pexels.com/photos/1054554/pexels-photo-1054554.jpeg?cs=srgb&dl=close-up-focus-gadget-1054554.jpg&fm=jpg',
-        price: 298
+        name: 'Amarey 2',
+        imageUrl: 'https://live.staticflickr.com/3641/5827633935_12b70cf3d1_b.jpg',
+        price: 400
       },
       {
         id: 33,
-        name: 'Speaker 4',
-        imageUrl: 'https://images.pexels.com/photos/1054554/pexels-photo-1054554.jpeg?cs=srgb&dl=close-up-focus-gadget-1054554.jpg&fm=jpg',
-        price: 276
+        name: 'Neato 4',
+        imageUrl: 'https://live.staticflickr.com/3641/5827633935_12b70cf3d1_b.jpg',
+        price: 390
       },
       {
         id: 34,
-        name: 'Speaker 5',
-        imageUrl: 'https://images.pexels.com/photos/1054554/pexels-photo-1054554.jpeg?cs=srgb&dl=close-up-focus-gadget-1054554.jpg&fm=jpg',
-        price: 154
+        name: 'Eufy 10',
+        imageUrl: 'https://live.staticflickr.com/3641/5827633935_12b70cf3d1_b.jpg',
+        price: 450
       },
       {
         id: 35,
-        name: 'Speaker 6',
-        imageUrl: 'https://images.pexels.com/photos/1054554/pexels-photo-1054554.jpeg?cs=srgb&dl=close-up-focus-gadget-1054554.jpg&fm=jpg',
-        price: 87
+        name: 'iLife 2',
+        imageUrl: 'https://live.staticflickr.com/3641/5827633935_12b70cf3d1_b.jpg',
+        price: 500
       }
     ]
   }

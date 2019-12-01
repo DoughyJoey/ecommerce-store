@@ -12,36 +12,36 @@ class Directory extends React.Component {
       sections: [
         {
           title: 'security',
-          imageUrl: 'https://images.unsplash.com/photo-1527893376446-318ed279c3a3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1389&q=80',
+          imageUrl: 'https://images.unsplash.com/photo-1558002038-1055907df827?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
           id: 1,
           linkUrl: 'security'
         },
         {
-          title: 'thermostats',
-          imageUrl: 'https://storage.needpix.com/rsynced_images/round-2585483_1280.jpg',
+          title: 'Lighting',
+          imageUrl: 'https://images.pexels.com/photos/255379/pexels-photo-255379.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
           id: 2,
           linkUrl: ''
         },
         {
-          title: 'vacuums',
-          imageUrl: 'https://live.staticflickr.com/3641/5827633935_12b70cf3d1_b.jpg',
+          title: 'Thermostat',
+          imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/e/ee/QubyDisplay_Home_withbackground.png',
           id: 3,
           linkUrl: ''
         },
         {
-          title: 'lighting',
-          imageUrl: 'https://live.staticflickr.com/2438/3881682653_ed5ac1f2a2_b.jpg',
+          title: 'Speaker',
+          imageUrl: 'https://images.pexels.com/photos/1666313/pexels-photo-1666313.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
           size: 'large',
           id: 4,
           linkUrl: ''
         },
         {
-          title: 'speakers',
-          imageUrl: 'https://images.unsplash.com/photo-1507646227500-4d389b0012be?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+          title: 'Vacuum',
+          imageUrl: 'https://live.staticflickr.com/3641/5827633935_12b70cf3d1_b.jpg',
           size: 'large',
           id: 5,
           linkUrl: ''
-        },
+        }
       ]
     };
   }
