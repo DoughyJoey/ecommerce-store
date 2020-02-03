@@ -1,5 +1,5 @@
-const SHOP_DATA = [
-  {
+const SHOP_DATA = {
+  security: {
     id: 1,
     title: 'Security',
     routeName: 'security',
@@ -60,7 +60,7 @@ const SHOP_DATA = [
       }
     ]
   },
-  {
+  lighting: {
     id: 2,
     title: 'Lighting',
     routeName: 'lighting',
@@ -115,7 +115,7 @@ const SHOP_DATA = [
       }
     ]
   },
-  {
+  thermostat: {
     id: 3,
     title: 'Thermostat',
     routeName: 'thermostat',
@@ -152,7 +152,7 @@ const SHOP_DATA = [
       }
     ]
   },
-  {
+  speaker: {
     id: 4,
     title: 'Speaker',
     routeName: 'speaker',
@@ -201,7 +201,7 @@ const SHOP_DATA = [
       }
     ]
   },
-  {
+  vacuum: {
     id: 5,
     title: 'Vacuum',
     routeName: 'vacuum',
@@ -244,6 +244,6 @@ const SHOP_DATA = [
       }
     ]
   }
-];
+};
 
 export default SHOP_DATA;
