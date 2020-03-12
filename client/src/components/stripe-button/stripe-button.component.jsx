@@ -4,7 +4,7 @@ import axios from 'axios';
 
 const StripeCheckoutButton = ({ price }) => {
   const priceForStripe = price * 100;
-  const publishableKey = 'pk_test_1Y1QMeepir9WwGj8qt7oZLiL00rEWU5EQL';
+  const publishableKey = 'pk_test_b7a3hFL5nC3qlBCZ6bQACpez00gyMMP52H';
 
   const onToken = token => {
     axios({
@@ -19,25 +19,25 @@ const StripeCheckoutButton = ({ price }) => {
         alert('succesful payment');
       })
       .catch(error => {
-        console.log('Payment Error: ', error);
+        console.log('Payment Error: ', JSON.parse(error));
         alert(
-          'There was an error with your payment! Please ensure your payment details are correct.'
+          'There was an issue with your payment! Please make sure you use the provided credit card.'
         );
       });
   };
 
   return (
     <StripeCheckout
-      label='Pay Now'
-      name='Shome Ltd.'
-      billingAddress
-      shippingAddress
-      image='https://svgshare.com/i/CUz.svg'
-      description={`Your total is $${price}`}
-      amount={priceForStripe}
-      panelLabel='Pay Now'
-      token={onToken}
-      stripeKey={publishableKey}
+    label='Pay Now'
+    name='Shome Ltd.'
+    billingAddress
+    shippingAddress
+    image='https://svgshare.com/i/CUz.svg'
+    description={`Your total is $${price}`}
+    amount={priceForStripe}
+    panelLabel='Pay Now'
+    token={onToken}
+    stripeKey={publishableKey}
     />
   );
 };
