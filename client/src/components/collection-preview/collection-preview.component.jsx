@@ -9,7 +9,7 @@ import {
   PreviewContainer
 } from './collection-preview.styles';
 
-const CollectionPreview = ({
+export const CollectionPreview = ({
   title,
   items,
   history,
