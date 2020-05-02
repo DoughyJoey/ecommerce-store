@@ -7,11 +7,14 @@ import { PersistGate } from 'redux-persist/integration/react';
 import { store, persistor } from './redux/store';
 import * as serviceWorker from './serviceWorker';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 import './index.css';
 import App from './App';
 
 ReactDOM.render(
   <Provider store={store}>
+    {/* BrowserRouter gives us routing functionality */}
     <BrowserRouter>
       <PersistGate persistor={persistor}>
         <App />

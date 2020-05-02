@@ -4,6 +4,7 @@ import Directory from '../../components/directory/directory.component';
 
 import { HomePageContainer } from './homepage.styles';
 
+// functional component calls directory component
 const HomePage = () => (
   <HomePageContainer>
     <Profiler 

@@ -12,8 +12,11 @@ import { GlobalStyle } from './global.styles';
 import { selectCurrentUser } from './redux/user/user.selectors';
 import { checkUserSession } from './redux/user/user.actions';
 
+// lazy loading design pattern
+// defers loading of page until it is needed
 const HomePage = lazy(() => import('./pages/homepage/homepage.component'));
 const ShopPage = lazy(() => import('./pages/shop/shop.component'));
+const ContactPage = lazy(() => import('./pages/contact/contact.component'));
 const SignInAndSignUpPage = lazy(() =>
   import('./pages/sign-in-and-sign-up/sign-in-and-sign-up.component')
 );
@@ -28,11 +31,13 @@ const App = ({ checkUserSession, currentUser }) => {
     <div>
       <GlobalStyle />
       <Header />
+      {/* Switch renders the first match it finds */}
       <Switch>
         <ErrorBoundary>
           <Suspense fallback={<Spinner />}>
             <Route exact path='/' component={HomePage} />
             <Route path='/shop' component={ShopPage} />
+            <Route path='/contact' component={ContactPage} />
             <Route exact path='/checkout' component={CheckoutPage} />
             <Route
               exact
