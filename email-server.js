@@ -1,7 +1,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+
 const sendGrid = require('@sendGrid/mail');
+
+
 const app = express();
 
 
@@ -18,7 +21,7 @@ app.use((req, res, next) => {
 
 
 app.get('/api', (req, res, next) => {
-    res.send('API Status: API is working')
+    res.send('API Status: Running')
 });
 
 
@@ -26,11 +29,9 @@ app.post('/api/email', (req, res, next) => {
 
     console.log(req.body);
 
-    //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
-
     sendGrid.setApiKey(process.env.SENDGRID_API_KEY);
     const msg = {
-        to: 'joseph.ryan3579@gmail.com',
+        to: 'joseph.ryan246810@gmail.com',
         from: req.body.email,
         subject: 'Website Contact',
         text: req.body.message
@@ -50,6 +51,7 @@ app.post('/api/email', (req, res, next) => {
             res.status(401).json({
                 success: false
             });
+
         });
 });
 
