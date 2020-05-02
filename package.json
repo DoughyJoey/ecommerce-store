@@ -8,13 +8,15 @@
   "scripts": {
     "client": "cd client && yarn start",
     "server": "nodemon server.js",
+    "email-server": "nodemon email-server.js",
     "build": "cd client && npm run build",
-    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
-    "start": "node server.js",
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn email-server\" \"yarn client\"",
+    "start": "node server.js && node email-server.js",
     "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build",
     "test-client": "cd client && yarn test"
   },
   "dependencies": {
+    "@sendgrid/mail": "^7.1.0",
     "body-parser": "^1.18.3",
     "compression": "^1.7.4",
     "cors": "2.8.5",
@@ -24,7 +26,7 @@
     "stripe": "6.28.0"
   },
   "devDependencies": {
-    "concurrently": "^4.0.1",
+    "concurrently": "^4.1.2",
     "nodemon": "^1.19.1"
   }
 }
