@@ -1,4 +1,7 @@
+// imports constant user types
 import UserActionTypes from './user.types';
+
+// actions are functions that return objects
 
 export const googleSignInStart = () => ({
   type: UserActionTypes.GOOGLE_SIGN_IN_START

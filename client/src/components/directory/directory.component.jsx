@@ -16,6 +16,7 @@ export const Directory = ({ sections }) => (
   </DirectoryMenuContainer>
 );
 
+// gets directory sections from selector
 const mapStateToProps = createStructuredSelector({
   sections: selectDirectorySections
 });

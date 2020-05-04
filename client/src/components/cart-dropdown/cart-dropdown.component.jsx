@@ -7,6 +7,7 @@ import CartItem from '../cart-item/cart-item.component';
 import { selectCartItems } from '../../redux/cart/cart.selectors';
 import { toggleCartHidden } from '../../redux/cart/cart.actions.js';
 
+// cart dropdown styles
 import {
   CartDropdownContainer,
   CartDropdownButton,
@@ -14,9 +15,14 @@ import {
   CartItemsContainer
 } from './cart-dropdown.styles';
 
+// passes in cartItems, history and dispatch
+// history prop used to navigate to checkout page
+// dispatch used to hide cart
 export const CartDropdown = ({ cartItems, history, dispatch }) => (
   <CartDropdownContainer>
     <CartItemsContainer>
+      {/* if the length is greater than 0, render the cart items */}
+      {/* Else, render your cart is empty */}
       {cartItems.length ? (
         cartItems.map(cartItem => (
           <CartItem key={cartItem.id} item={cartItem} />
@@ -25,6 +31,8 @@ export const CartDropdown = ({ cartItems, history, dispatch }) => (
         <EmptyMessageContainer>Your cart is empty</EmptyMessageContainer>
       )}
     </CartItemsContainer>
+    {/* Button goes to the checkout page */}
+    {/* toggleCartHidden hides cart after navigating to checkout page */}
     <CartDropdownButton
       onClick={() => {
         history.push('/checkout');
@@ -36,6 +44,7 @@ export const CartDropdown = ({ cartItems, history, dispatch }) => (
   </CartDropdownContainer>
 );
 
+// brings in the cart items from cart selector
 const mapStateToProps = createStructuredSelector({
   cartItems: selectCartItems
 });

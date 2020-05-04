@@ -2,6 +2,8 @@ import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
 
+
+// firebase config settings
 const config = {
     apiKey: "AIzaSyB4A4CmOKQJRSn8fb7HYq6b0kX0WI_be4M",
     authDomain: "ecommerce-store-db.firebaseapp.com",
@@ -15,13 +17,21 @@ const config = {
 
 firebase.initializeApp(config);
 
+
+// gets the user auth object and stores it inside the database
+// async action because we are querying an api
 export const createUserProfileDocument = async (userAuth, additionalData) => {
+  // if the user auth object does not exist return
   if (!userAuth) return;
 
+  //gets a specific user
   const userRef = firestore.doc(`users/${userAuth.uid}`);
 
+  // gets user snapshot
+  // we use snapshot object to see if user already exists
   const snapShot = await userRef.get();
 
+  // if the user doesn't exist, we create a new user
   if (!snapShot.exists) {
     const { displayName, email } = userAuth;
     const createdAt = new Date();
@@ -53,25 +63,27 @@ export const getUserCartRef = async userId => {
   }
 };
 
-export const addCollectionAndDocuments = async (
-  collectionKey,
-  objectsToAdd
-) => {
+// creates a collection in firestore using the collection key
+export const addCollectionAndDocuments = async (collectionKey, objectsToAdd) => {
   const collectionRef = firestore.collection(collectionKey);
 
+  // batch groups calls into one big request
   const batch = firestore.batch();
   objectsToAdd.forEach(obj => {
     const newDocRef = collectionRef.doc();
     batch.set(newDocRef, obj);
   });
 
+  // fires off batch request
   return await batch.commit();
 };
 
+// gets collection from firestore
 export const convertCollectionsSnapshotToMap = collections => {
   const transformedCollection = collections.docs.map(doc => {
     const { title, items } = doc.data();
 
+    // returns the below object
     return {
       routeName: encodeURI(title.toLowerCase()),
       id: doc.id,
@@ -80,6 +92,7 @@ export const convertCollectionsSnapshotToMap = collections => {
     };
   });
 
+  // starts with an empty object and gets each collection by the title
   return transformedCollection.reduce((accumulator, collection) => {
     accumulator[collection.title.toLowerCase()] = collection;
     return accumulator;
@@ -95,10 +108,14 @@ export const getCurrentUser = () => {
   });
 };
 
+// gives us access to auth
 export const auth = firebase.auth();
+// gives us access to firestore
 export const firestore = firebase.firestore();
 
+// gives us access to google auth
 export const googleProvider = new firebase.auth.GoogleAuthProvider();
+// triggers the google popup
 googleProvider.setCustomParameters({ prompt: 'select_account' });
 export const signInWithGoogle = () => auth.signInWithPopup(googleProvider);
 

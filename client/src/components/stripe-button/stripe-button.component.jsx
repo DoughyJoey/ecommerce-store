@@ -27,6 +27,7 @@ const StripeCheckoutButton = ({ price }) => {
   };
 
   return (
+    // properties are provided by stripe checkout library
     <StripeCheckout
       label='Pay Now'
       name='Shome Ltd.'

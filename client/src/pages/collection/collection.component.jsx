@@ -5,17 +5,22 @@ import CollectionItem from '../../components/collection-item/collection-item.com
 
 import { selectCollection } from '../../redux/shop/shop.selectors';
 
+// collection styling
 import {
   CollectionPageContainer,
   CollectionTitle,
   CollectionItemsContainer
 } from './collection.styles';
 
+
 export const CollectionPage = ({ collection }) => {
+  // destructures of the title and items from collection
   const { title, items } = collection;
   return (
     <CollectionPageContainer>
+    {/* renders the title */}
       <CollectionTitle>{title}</CollectionTitle>
+      {/* iterates over the collection items */}
       <CollectionItemsContainer>
         {items.map(item => (
           <CollectionItem key={item.id} item={item} />
@@ -24,6 +29,7 @@ export const CollectionPage = ({ collection }) => {
     </CollectionPageContainer>
   );
 };
+
 
 const mapStateToProps = (state, ownProps) => ({
   collection: selectCollection(ownProps.match.params.collectionId)(state)
