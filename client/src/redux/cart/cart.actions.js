@@ -23,6 +23,7 @@ export const clearItemFromCart = item => ({
   payload: item
 });
 
+// clears cart on sign out
 export const clearCart = () => ({
   type: CartActionTypes.CLEAR_CART
 });

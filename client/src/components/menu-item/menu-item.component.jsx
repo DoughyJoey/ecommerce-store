@@ -12,14 +12,7 @@ import {
 } from './menu-item.styles';
 
 // passes in the below properties 
-export const MenuItem = ({
-  title,
-  imageUrl,
-  size,
-  history,
-  linkUrl,
-  match
-}) => (
+export const MenuItem = ({title, imageUrl, size, history, linkUrl, match }) => (
   // sets the image size
   // on click directs user to the link url
   <MenuItemContainer

@@ -50,6 +50,7 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
   return userRef;
 };
 
+// gets cart items from firebase
 export const getUserCartRef = async userId => {
   const cartsRef = firestore.collection('carts').where('userId', '==', userId);
   const snapShot = await cartsRef.get();
@@ -73,7 +74,6 @@ export const addCollectionAndDocuments = async (collectionKey, objectsToAdd) => 
     const newDocRef = collectionRef.doc();
     batch.set(newDocRef, obj);
   });
-
   // fires off batch request
   return await batch.commit();
 };
@@ -99,6 +99,8 @@ export const convertCollectionsSnapshotToMap = collections => {
   }, {});
 };
 
+
+// gets current user from the database
 export const getCurrentUser = () => {
   return new Promise((resolve, reject) => {
     const unsubscribe = auth.onAuthStateChanged(userAuth => {

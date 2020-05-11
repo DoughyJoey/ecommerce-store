@@ -18,6 +18,7 @@ import {
   getCurrentUser
 } from '../../firebase/firebase.utils';
 
+
 export function* getSnapshotFromUserAuth(userAuth, additionalData) {
   try {
     const userRef = yield call(
@@ -50,6 +51,8 @@ export function* signInWithEmail({ payload: { email, password } }) {
   }
 }
 
+// checks whether user is authenticated
+// called by check user session
 export function* isUserAuthenticated() {
   try {
     const userAuth = yield getCurrentUser();
@@ -90,6 +93,8 @@ export function* onEmailSignInStart() {
   yield takeLatest(UserActionTypes.EMAIL_SIGN_IN_START, signInWithEmail);
 }
 
+// checks the users session
+// used to ensure persistence
 export function* onCheckUserSession() {
   yield takeLatest(UserActionTypes.CHECK_USER_SESSION, isUserAuthenticated);
 }

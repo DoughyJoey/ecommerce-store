@@ -19,6 +19,7 @@ if (process.env.NODE_ENV === 'development') {
 
 export const store = createStore(rootReducer, applyMiddleware(...middlewares));
 
+// runs saga middleware
 sagaMiddleware.run(rootSaga);
 
 // persistor is a persisted version of the store

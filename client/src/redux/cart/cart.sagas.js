@@ -7,6 +7,7 @@ import { clearCart, setCartFromFirebase } from './cart.actions';
 import { selectCartItems } from './cart.selectors';
 import CartActionTypes from './cart.types';
 
+// clears cart on on sign out action
 export function* clearCartOnSignOut() {
   yield put(clearCart());
 }
@@ -30,6 +31,7 @@ export function* checkCartFromFirebase({ payload: user }) {
   yield put(setCartFromFirebase(cartSnapshot.data().cartItems));
 }
 
+// takes clear cart function
 export function* onSignOutSuccess() {
   yield takeLatest(UserActionTypes.SIGN_OUT_SUCCESS, clearCartOnSignOut);
 }

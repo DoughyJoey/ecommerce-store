@@ -1,4 +1,5 @@
-  
+// takeLatest takes the last call
+
 import { takeLatest, call, put, all } from 'redux-saga/effects';
 
 import {
@@ -6,6 +7,7 @@ import {
   convertCollectionsSnapshotToMap
 } from '../../firebase/firebase.utils';
 
+// import in the shop actions
 import {
   fetchCollectionsSuccess,
   fetchCollectionsFailure
@@ -13,6 +15,7 @@ import {
 
 import ShopActionTypes from './shop.types';
 
+// peforms async call to fetch collections from database
 export function* fetchCollectionsAsync() {
   try {
     const collectionRef = firestore.collection('collections');
@@ -26,6 +29,7 @@ export function* fetchCollectionsAsync() {
     yield put(fetchCollectionsFailure(error.message));
   }
 }
+
 
 export function* fetchCollectionsStart() {
   yield takeLatest(

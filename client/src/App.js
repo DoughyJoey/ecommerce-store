@@ -14,13 +14,9 @@ import { checkUserSession } from './redux/user/user.actions';
 const HomePage = lazy(() => import('./pages/homepage/homepage.component'));
 const ShopPage = lazy(() => import('./pages/shop/shop.component'));
 const ContactPage = lazy(() => import('./pages/contact/contact.component'));
-
-const SignInAndSignUpPage = lazy(() => import('./pages/sign-in-and-sign-up/sign-in-and-sign-up.component'));
-
 const SignInAndSignUpPage = lazy(() =>
-  import('./pages/sign-in-and-sign-up/sign-in-and-sign-up.component')
-);
-
+ import('./pages/sign-in-and-sign-up/sign-in-and-sign-up.component')
+ );
 const CheckoutPage = lazy(() => import('./pages/checkout/checkout.component'));
 
 const App = ({ checkUserSession, currentUser }) => {
@@ -39,6 +35,7 @@ const App = ({ checkUserSession, currentUser }) => {
         {/* error handling */}
         <ErrorBoundary>
           {/* loading spinner */}
+          {/* used to implement lazy loading */}
           <Suspense fallback={<Spinner />}>
             {/* application routing */}
             {/* exact ensures page on renders on exact path */}
@@ -66,6 +63,7 @@ const mapStateToProps = createStructuredSelector({
   currentUser: selectCurrentUser
 });
 
+// checks the user session
 const mapDispatchToProps = dispatch => ({
   checkUserSession: () => dispatch(checkUserSession())
 });
@@ -74,3 +72,82 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(App);
+
+
+/* 
+REFERENCES
+
+***************************************************************************************
+*    Title: Building a Portfolio Website with React
+*    Author: Garrett Love
+*    Date: 02/04/2020
+*    Code version: n/a
+*    Availability: https://www.youtube.com/watch?v=41-jn5tdg50&list=PLnpdZyv-BjINbUjmTUsyziHz_4fa9hM5G
+*
+***************************************************************************************
+
+***************************************************************************************
+*    Title: Code-Splitting
+*    Author: React
+*    Date: 29/03/2020
+*    Code version: n/a
+*    Availability: https://reactjs.org/docs/code-splitting.html
+*
+***************************************************************************************
+
+***************************************************************************************
+*    Title: How To Setup Payments With Node.js And Stripe
+*    Author: Web Dev Simplified
+*    Date: 22/02/2020
+*    Code version: n/a
+*    Availability: https://www.youtube.com/watch?v=mI_-1tbIXQI
+*
+***************************************************************************************
+
+***************************************************************************************
+*    Title: styled-components
+*    Author: macintoshhelper
+*    Date: 14/02/2020
+*    Code version: n/a
+*    Availability: https://github.com/styled-components/styled-components
+*
+***************************************************************************************
+
+***************************************************************************************
+*    Title: styled-components
+*    Author: macintoshhelper
+*    Date: 14/02/2020
+*    Code version: n/a
+*    Availability: https://github.com/styled-components/styled-components
+*
+***************************************************************************************
+
+***************************************************************************************
+*    Title: React Redux Tutorials - 1 - Introduction
+*    Author: Codevolution
+*    Date: 13/01/2019
+*    Code version: n/a
+*    Availability: https://www.youtube.com/watch?v=9boMnm5X9ak&list=PLC3y8-rFHvwheJHvseC3I0HuYI2f46oAK
+*
+***************************************************************************************
+
+***************************************************************************************
+*    Title: Add Firebase to your JavaScript project
+*    Author: Firebase
+*    Date: 22/11/2019
+*    Code version: n/a
+*    Availability: https://firebase.google.com/docs/web/setup
+*
+***************************************************************************************
+
+***************************************************************************************
+*    Title: Getting Started with Create React App
+*    Author: Yihua Zhang
+*    Date: 13/10/2019
+*    Code version: n/a
+*    Availability: https://github.com/ZhangMYihua
+*
+***************************************************************************************
+
+
+*/
