@@ -6,6 +6,7 @@ const StripeCheckoutButton = ({ price }) => {
   const priceForStripe = price * 100;
   const publishableKey = 'pk_test_7LJMis4lmRQZd6bskKx5qLlt00rczSssfL';
 
+  // creates token we can send to the backend server
   const onToken = token => {
     axios({
       url: 'payment',
@@ -15,9 +16,11 @@ const StripeCheckoutButton = ({ price }) => {
         token: token
       }
     })
+    // successful response
       .then(response => {
         alert('succesful payment');
       })
+      // error response
       .catch(error => {
         console.log('Payment Error: ', JSON.parse(error));
         alert(
@@ -37,6 +40,7 @@ const StripeCheckoutButton = ({ price }) => {
       description={`Your total is $${price}`}
       amount={priceForStripe}
       panelLabel='Pay Now'
+      // sets token to onToken we created
       token={onToken}
       stripeKey={publishableKey}
     />

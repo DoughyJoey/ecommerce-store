@@ -14,24 +14,29 @@ import ShopActionTypes from './shop.types';
 
 import { fetchCollectionsAsync, fetchCollectionsStart } from './shop.sagas';
 
+// fetch collection start saga
 describe('fetch collections start saga', () => {
   it('should trigger on FETCH_COLLECTIONS_START', () => {
     const generator = fetchCollectionsStart();
+    // expects fetch collection start saga to trigger FETCH_COLLECTIONS_START action
     expect(generator.next().value).toEqual(
       takeLatest(ShopActionTypes.FETCH_COLLECTIONS_START, fetchCollectionsAsync)
     );
   });
 });
 
+// fetch collection async saga
 describe('fetch collections async saga', () => {
   const generator = fetchCollectionsAsync();
 
+  // expects firestore collection to be called
   it('should call firestore collection ', () => {
     const getCollection = jest.spyOn(firestore, 'collection');
     generator.next();
     expect(getCollection).toHaveBeenCalled();
   });
 
+  // expects call to convertCollectionsSnapshot
   it('should call convertCollectionsSnapshot saga ', () => {
     const mockSnapshot = {};
     expect(generator.next(mockSnapshot).value).toEqual(
@@ -39,7 +44,8 @@ describe('fetch collections async saga', () => {
     );
   });
 
-  it('should fire fetchCollectionsSuccess if collectionsMap is succesful', () => {
+  // expects fetchCollectionsSuccess to fire
+  it('should fire fetchCollectionsSuccess if collectionsMap is successful', () => {
     const mockCollectionsMap = {
       hats: { id: 1 }
     };
@@ -49,6 +55,7 @@ describe('fetch collections async saga', () => {
     );
   });
 
+  // expects fetchCollectionsFailure to fire
   it('should fire fetchCollectionsFailure if get collection fails at any point', () => {
     const newGenerator = fetchCollectionsAsync();
     newGenerator.next();

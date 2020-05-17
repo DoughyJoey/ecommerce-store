@@ -18,7 +18,7 @@ import {
   getCurrentUser
 } from '../../firebase/firebase.utils';
 
-
+// gets snapshot object from user auth
 export function* getSnapshotFromUserAuth(userAuth, additionalData) {
   try {
     const userRef = yield call(
@@ -33,6 +33,7 @@ export function* getSnapshotFromUserAuth(userAuth, additionalData) {
   }
 }
 
+// uses googleProvider from firebase utils
 export function* signInWithGoogle() {
   try {
     const { user } = yield auth.signInWithPopup(googleProvider);

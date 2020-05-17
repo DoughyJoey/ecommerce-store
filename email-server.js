@@ -1,10 +1,9 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-
 const sendGrid = require('@sendGrid/mail');
 
-
+// create express app
 const app = express();
 
 // parses body using json
@@ -27,14 +26,15 @@ app.get('/api', (req, res, next) => {
     res.send('API Status: Running')
 });
 
+// set port to 3030
+app.listen(3030, '0.0.0.0');
+
 
 // creates the route
 app.post('/api/email', (req, res, next) => {
 
     // used for debugging
     console.log(req.body);
-
-    //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
 
     // sets api key to our encrypted secret api key
     sendGrid.setApiKey(process.env.SENDGRID_API_KEY);
@@ -60,7 +60,4 @@ app.post('/api/email', (req, res, next) => {
             });
         });
 });
-
-// set port to 3030
-app.listen(3030, '0.0.0.0');
 

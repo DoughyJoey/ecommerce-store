@@ -16,6 +16,7 @@ export function* updateCartInFirebase() {
   const currentUser = yield select(selectCurrentUser);
   if (currentUser) {
     try {
+      // getUserCartRef function in firebase
       const cartRef = yield getUserCartRef(currentUser.id);
       const cartItems = yield select(selectCartItems);
       yield cartRef.update({ cartItems });
@@ -26,6 +27,7 @@ export function* updateCartInFirebase() {
 }
 
 export function* checkCartFromFirebase({ payload: user }) {
+  // getUserCartRef function in firebase
   const cartRef = yield getUserCartRef(user.id);
   const cartSnapshot = yield cartRef.get();
   yield put(setCartFromFirebase(cartSnapshot.data().cartItems));
@@ -36,10 +38,12 @@ export function* onSignOutSuccess() {
   yield takeLatest(UserActionTypes.SIGN_OUT_SUCCESS, clearCartOnSignOut);
 }
 
+// calls checkCartFromFirebase on sign in success
 export function* onUserSignIn() {
   yield takeLatest(UserActionTypes.SIGN_IN_SUCCESS, checkCartFromFirebase);
 }
 
+// passes in actions and updates cart in friebase
 export function* onCartChange() {
   yield takeLatest(
     [
@@ -50,6 +54,7 @@ export function* onCartChange() {
     updateCartInFirebase
   );
 }
+
 
 export function* cartSagas() {
   yield all([call(onSignOutSuccess), call(onCartChange), call(onUserSignIn)]);

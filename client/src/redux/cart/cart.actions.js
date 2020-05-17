@@ -28,10 +28,12 @@ export const clearCart = () => ({
   type: CartActionTypes.CLEAR_CART
 });
 
+// updates cart in firebase
 export const updateCartInFirebase = () => ({
   type: CartActionTypes.UPDATE_CART_IN_FIREBASE
 });
 
+// pulls cart items and sets them from firebase
 export const setCartFromFirebase = cartItems => ({
   type: CartActionTypes.SET_CART_FROM_FIREBASE,
   payload: cartItems

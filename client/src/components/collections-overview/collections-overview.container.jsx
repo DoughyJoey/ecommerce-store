@@ -1,8 +1,10 @@
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
+// compose used to wrap components
 import { compose } from 'redux';
-
+//selectors
 import { selectIsCollectionFetching } from '../../redux/shop/shop.selectors';
+//components
 import WithSpinner from '../with-spinner/with-spinner.component';
 import CollectionsOverview from './collections-overview.component';
 

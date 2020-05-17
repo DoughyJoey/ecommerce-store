@@ -1,3 +1,4 @@
+// sets the initial state of each section
 export const INITIAL_STATE = {
     sections: [
         {

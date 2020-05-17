@@ -9,6 +9,7 @@ import { signUpStart } from '../../redux/user/user.actions';
 import { SignUpContainer, SignUpTitle } from './sign-up.styles';
 
 // takes the signUpStart from user actions
+// initialises props as empty strings
 const SignUp = ({ signUpStart }) => {
   const [userCredentials, setUserCredentials] = useState({
     displayName: '',
@@ -30,6 +31,7 @@ const SignUp = ({ signUpStart }) => {
       return;
     }
     // signUpStart from user actions
+    // passes in user props
     signUpStart({ displayName, email, password });
   };
 
@@ -87,6 +89,7 @@ const SignUp = ({ signUpStart }) => {
   );
 };
 
+// brings in the signUpStart action from redux
 const mapDispatchToProps = dispatch => ({
   signUpStart: userCredentials => dispatch(signUpStart(userCredentials))
 });

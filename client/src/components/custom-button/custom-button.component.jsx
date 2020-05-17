@@ -1,5 +1,6 @@
 import React from 'react';
 
+// custom button styling
 import { CustomButtonContainer } from './custom-button.styles';
 
 // stateless functional component

@@ -15,6 +15,15 @@ import {
 
 import ShopActionTypes from './shop.types';
 
+
+// starts fecting collection
+export function* fetchCollectionsStart() {
+  yield takeLatest(
+    ShopActionTypes.FETCH_COLLECTIONS_START,
+    fetchCollectionsAsync
+  );
+}
+
 // peforms async call to fetch collections from database
 export function* fetchCollectionsAsync() {
   try {
@@ -28,14 +37,6 @@ export function* fetchCollectionsAsync() {
   } catch (error) {
     yield put(fetchCollectionsFailure(error.message));
   }
-}
-
-
-export function* fetchCollectionsStart() {
-  yield takeLatest(
-    ShopActionTypes.FETCH_COLLECTIONS_START,
-    fetchCollectionsAsync
-  );
 }
 
 export function* shopSagas() {

@@ -9,8 +9,10 @@ import createSagaMiddleware from 'redux-saga';
 import rootReducer from './root-reducer';
 import rootSaga from './root-saga';
 
+// create saga middleware
 const sagaMiddleware = createSagaMiddleware();
 
+// pass saga middle into middlewares
 const middlewares = [sagaMiddleware];
 
 if (process.env.NODE_ENV === 'development') {

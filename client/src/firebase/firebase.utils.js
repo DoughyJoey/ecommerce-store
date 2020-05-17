@@ -17,7 +17,7 @@ const config = {
 
 firebase.initializeApp(config);
 
-
+// creates user profile in the database
 // gets the user auth object and stores it inside the database
 // async action because we are querying an api
 export const createUserProfileDocument = async (userAuth, additionalData) => {
@@ -33,6 +33,7 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
 
   // if the user doesn't exist, we create a new user
   if (!snapShot.exists) {
+    // stores their display name, email, and date created
     const { displayName, email } = userAuth;
     const createdAt = new Date();
     try {
@@ -69,6 +70,7 @@ export const addCollectionAndDocuments = async (collectionKey, objectsToAdd) => 
   const collectionRef = firestore.collection(collectionKey);
 
   // batch groups calls into one big request
+  // does this in case of any failures
   const batch = firestore.batch();
   objectsToAdd.forEach(obj => {
     const newDocRef = collectionRef.doc();

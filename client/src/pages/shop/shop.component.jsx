@@ -1,8 +1,11 @@
 import React, { useEffect, lazy, Suspense } from 'react';
 import { Route } from 'react-router-dom';
 import { connect } from 'react-redux';
+// actions
 import { fetchCollectionsStart } from '../../redux/shop/shop.actions';
+//components
 import Spinner from '../../components/spinner/spinner.component';
+// styles
 import { ShopPageContainer } from './shop.styles';
 
 // lazy loads collections-overview.container to optimise performance
@@ -15,7 +18,7 @@ const CollectionPageContainer = lazy(() =>
   import('../collection/collection.container')
 );
 
-
+// calls the fetchCollectionsStart action
 export const ShopPage = ({ fetchCollectionsStart, match }) => {
   useEffect(() => {
     fetchCollectionsStart();
@@ -31,6 +34,7 @@ export const ShopPage = ({ fetchCollectionsStart, match }) => {
           path={`${match.path}`}
           component={CollectionsOverviewContainer}
         />
+        {/* path to specific collection category pages */}
         <Route
           path={`${match.path}/:collectionId`}
           component={CollectionPageContainer}

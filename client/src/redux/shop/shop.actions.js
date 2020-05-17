@@ -22,7 +22,7 @@ export const fetchCollectionsFailure = errorMessage => ({
   payload: errorMessage
 });
 
-
+// performs async call to fetch collections
 export const fetchCollectionsStartAsync = () => {
   return dispatch => {
     // creates the collection ref

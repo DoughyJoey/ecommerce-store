@@ -2,6 +2,7 @@ import React from 'react';
 // connect is a higher order component that gives us access to redux
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
+// conponents
 import CartIcon from '../cart-icon/cart-icon.component';
 import CartDropdown from '../cart-dropdown/cart-dropdown.component';
 

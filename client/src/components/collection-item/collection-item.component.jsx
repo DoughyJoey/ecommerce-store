@@ -1,5 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
+
+// cart actions
 import { addItem } from '../../redux/cart/cart.actions';
 
 // collection item styling
@@ -21,12 +23,16 @@ export const CollectionItem = ({ item, addItem }) => {
   // onClick buttion enables users to add items to their cart
   return (
     <CollectionItemContainer>
+    {/* displays the relevant image */}
       <BackgroundImage className='image' imageUrl={imageUrl} />
       <CollectionFooterContainer>
+      {/* displays relevant name */}
         <NameContainer>{name}</NameContainer>
+      {/* displays relevant price */}
         <PriceContainer>{price}</PriceContainer>
       </CollectionFooterContainer>
       {/* uses addItem action from cart action */}
+      {/* displays inverted custom button styling */}
       <AddButton onClick={() => addItem(item)} inverted>
         Add to cart
       </AddButton>
@@ -34,7 +40,8 @@ export const CollectionItem = ({ item, addItem }) => {
   );
 };
 
-// brings addItem action into component
+// brings addItem action into component from redux
+// can be found in cart actions
 const mapDispatchToProps = dispatch => ({
   addItem: item => dispatch(addItem(item))
 });

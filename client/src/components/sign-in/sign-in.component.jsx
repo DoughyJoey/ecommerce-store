@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
+//components
 import FormInput from '../form-input/form-input.component';
 import CustomButton from '../custom-button/custom-button.component';
 
@@ -16,6 +17,9 @@ import {
   ButtonsBarContainer
 } from './sign-in.styles';
 
+// destructure off email and password from email and google sign in start
+// uses useState hook
+// sets credentials as empty strings
 const SignIn = ({ emailSignInStart, googleSignInStart }) => {
   const [userCredentials, setCredentials] = useState({
     email: '',
@@ -29,6 +33,8 @@ const SignIn = ({ emailSignInStart, googleSignInStart }) => {
     // prevents the default functionality
     event.preventDefault();
 
+    // calls email sign in start from user actions
+    // passes in email and password
     emailSignInStart(email, password);
   };
 
@@ -38,6 +44,7 @@ const SignIn = ({ emailSignInStart, googleSignInStart }) => {
     const { value, name } = event.target;
 
     // dynamically sets state
+    // sets it to the users input value
     setCredentials({ ...userCredentials, [name]: value });
   };
 
@@ -72,7 +79,7 @@ const SignIn = ({ emailSignInStart, googleSignInStart }) => {
           {/* uses custom button component */}
           <CustomButton type='submit'> Sign in </CustomButton>
           {/* google sign in button */}
-          {/* googleSignInStart from user actions */}
+          {/* onClick triggers the googleSignInStart action */}
           <CustomButton
             type='button'
             onClick={googleSignInStart}
@@ -86,6 +93,7 @@ const SignIn = ({ emailSignInStart, googleSignInStart }) => {
   );
 };
 
+// brings in actions from redux
 const mapDispatchToProps = dispatch => ({
   googleSignInStart: () => dispatch(googleSignInStart()),
   emailSignInStart: (email, password) =>

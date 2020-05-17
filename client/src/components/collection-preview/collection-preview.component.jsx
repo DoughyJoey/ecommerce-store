@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+// components
 import CollectionItem from '../collection-item/collection-item.component';
 
 // collection styling
@@ -9,7 +10,7 @@ import {
   PreviewContainer
 } from './collection-preview.styles';
 
-
+// previews first 4 items for each shop category
 export const CollectionPreview = ({
   title,
   items,
